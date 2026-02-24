@@ -2,57 +2,54 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Sayuran - Pawon Djawa</title>
+    <title>Makanan - Pawon Djawa</title>
 
-    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/sayuran.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/makanan.css') }}">
 </head>
 <body>
 @include('layouts.Header')
 <div class="container">
 
-    <!-- TITLE -->
-    <div class="header">
+    <!-- KEPITING -->
+    <div class="section">
 
-        <div class="title">
-            SAYURAN
+        <div class="section-header">
+
+            <h1 class="section-title">SAYURAN</h1>
+
+            <div class="section-price">
+                20k/Porsi
+            </div>
+
         </div>
 
-        <div class="price">
-            20k/porsi
+        <div class="menu-row">
+
+            <div class="menu-card">
+                <img src="{{ asset('images/kangkung.png') }}">
+                <p>Kangkung</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ asset('images/capcay.png') }}">
+                <p>capcay</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ asset('images/tumispare.png') }}">
+                <p>tumis pare</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ asset('images/urap.png') }}">
+                <p>Urap-Urap</p>
+            </div>
+
         </div>
 
     </div>
-
-    <!-- MENU LIST -->
-    <div class="menu-list">
-
-        <div class="menu-item">
-            <img src="{{ asset('images/kangkung.png') }}">
-            <div class="menu-name">Kangkung</div>
-        </div>
-
-        <div class="menu-item">
-            <img src="{{ asset('images/capcay.png') }}">
-            <div class="menu-name">Cap Cay</div>
-        </div>
-
-        <div class="menu-item">
-            <img src="{{ asset('images/tumispare.png') }}">
-            <div class="menu-name">Tumis Pare</div>
-        </div>
-
-        <div class="menu-item">
-            <img src="{{ asset('images/urap.png') }}">
-            <div class="menu-name">Urap</div>
-        </div>
-
-    </div>
-
-</div>
 
 </body>
 </html>

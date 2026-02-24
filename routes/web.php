@@ -31,6 +31,7 @@ Route::view('/daftarmenu', 'daftarmenu')->name('daftarmenu');
 Route::view('/paket', 'paket')->name('paket');
 Route::view('/reservasi', 'reservasi')->name('reservasi');
 Route::view('/tentang', 'tentang')->name('tentang');
+Route::view('/login', 'login')->name('login');
 
 
 

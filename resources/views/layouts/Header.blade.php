@@ -18,6 +18,7 @@
         <a href="{{ url('/paket') }}">Paket</a>
         <a href="{{ url('/reservasi') }}">Reservasi</a>
         <a href="{{ url('/tentang') }}">Tentang Kami</a>
+        <a href="{{ url('/login') }}">Login</a>
     </nav>
 
 </header>
