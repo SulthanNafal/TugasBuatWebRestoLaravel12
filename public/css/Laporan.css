@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.tentang-section {
+
+    min-height: 100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../images/image 1.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 60px;
+
+    color: white;
+}
+
+/* LOGO */
+.logo {
+
+    width: 150px;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logo:hover {
+
+    transform: scale(1.05);
+}
+
+/* TITLE */
+.title {
+
+    font-size: 36px;
+
+    font-weight: 600;
+
+    margin-bottom: 30px;
+}
+
+.search-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: right;
+}
+
+.search-input {
+    padding: 8px 12px;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    border: none;
+    background-color: #c23b3b;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.table-container {
+    width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.transaksi-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.transaksi-table th {
+    background-color: #c23b3b;
+    color: white;
+    padding: 12px;
+}
+
+.transaksi-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.btn-edit {
+    background-color: #c23b3b;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+}
+
+.btn-delete {
+     background-color: #c23b3b;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+}

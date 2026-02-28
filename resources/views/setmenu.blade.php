@@ -21,7 +21,7 @@
 
     <!-- TITLE -->
     <div class="title">
-        PAKET MENU
+       PILIH PAKET MENU
     </div>
 
     <!-- NAV -->
@@ -29,10 +29,6 @@
 
         <a href="{{ route('setmenu') }}" class="menu-btn active">
             Set Menu
-        </a>
-
-        <a href="{{ route('catering') }}" class="menu-btn">
-            Catering
         </a>
 
         <a href="{{ route('prasmanan') }}" class="menu-btn">
@@ -47,31 +43,29 @@
 
     <!-- CARD MENU -->
     <div class="card-container">
-
-        <!-- Menu A -->
-        <div class="card">
-
-            <h2>Menu A</h2>
-
-            <div class="price">
-                Rp 150.000
-            </div>
-
-            <b>Makanan</b>
-            <ul>
-                <li>Ayam Goreng / Panggang</li>
-                <li>Gurami Bakar / Asam Manis</li>
-                <li>Sate Ayam / Cumi Goreng</li>
-                <li>Udang Tauco</li>
-                <li>Kangkung Terasi</li>
-                <li>Sayur Asam</li>
-                <li>Tahu Tempe Goreng</li>
-                <li>Nasi Putih</li>
-                <li>Buah-buahan</li>
-            </ul>
-
+<a href="{{ route('reservasi', ['kategori' => 'setmenu', 'menu' => 'A']) }}">
+    <div class="card">
+        <h2>Menu A</h2>
+        <div class="price">
+            Rp 150.000
         </div>
 
+        <b>Makanan</b>
+        <ul>
+            <li>Ayam Goreng / Panggang</li>
+            <li>Gurami Bakar / Asam Manis</li>
+            <li>Sate Ayam / Cumi Goreng</li>
+            <li>Udang Tauco</li>
+            <li>Kangkung Terasi</li>
+            <li>Sayur Asam</li>
+            <li>Tahu Tempe Goreng</li>
+            <li>Nasi Putih</li>
+            <li>Buah-buahan</li>
+        </ul>
+    </div>
+</a>
+
+<a href="{{ route('reservasi', ['kategori' => 'setmenu', 'menu' => 'B']) }}">
         <!-- Menu B -->
         <div class="card">
 
@@ -95,7 +89,9 @@
             </ul>
 
         </div>
+</a>
 
+<a href="{{ route('reservasi', ['kategori' => 'setmenu', 'menu' => 'C']) }}">
         <!-- Menu C -->
         <div class="card">
 
@@ -119,7 +115,9 @@
             </ul>
 
         </div>
+</a>
 
+<a href="{{ route('reservasi', ['kategori' => 'setmenu', 'menu' => 'D']) }}">
         <!-- Menu D -->
         <div class="card">
 
@@ -143,6 +141,7 @@
             </ul>
 
         </div>
+</a>
 
     </div>
 

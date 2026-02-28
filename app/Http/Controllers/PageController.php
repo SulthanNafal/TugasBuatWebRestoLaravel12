@@ -26,18 +26,39 @@ class PageController extends Controller
         return view('paket');
     }
 
-    public function reservasi()
-    {
-        return view('reservasi');
-    }
-
     public function tentang()
     {
         return view('tentang');
     }
 
-    public function login()
+     public function Laporan()
     {
-        return view('login');
+        return view('Laporan');
     }
+
+    public function daftarlogin()
+    {
+        return view('daftarlogin');
+    }
+
+    public function reservasi(Request $request)
+{
+    if (!$request->kategori || !$request->menu) {
+        return redirect()->route('paket');
+    }
+
+    return view('reservasi');
+}
+
+public function transaksi(Request $request)
+{
+    return view('transaksi', [
+        'paket' => $request->paket,
+        'nama' => $request->nama,
+        'telepon' => $request->telepon,
+        'jumlah_orang' => $request->jumlah_orang,
+        'tanggal' => $request->tanggal,
+    ]);
+}
+
 }

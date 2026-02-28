@@ -15,8 +15,7 @@
         <a href="{{ url('/dashboard') }}">Dashboard</a>
         <a href="{{ url('/fasilitas') }}">Fasilitas</a>
         <a href="{{ url('/daftarmenu') }}">Menu</a>
-        <a href="{{ url('/paket') }}">Paket</a>
-        <a href="{{ url('/reservasi') }}">Reservasi</a>
+        <a href="{{ url('/paket') }}">Reservasi</a>
         <a href="{{ url('/tentang') }}">Tentang Kami</a>
         <a href="{{ url('/login') }}">Login</a>
     </nav>

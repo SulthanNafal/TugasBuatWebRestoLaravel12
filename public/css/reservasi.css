@@ -26,12 +26,9 @@ body {
 
 /* LOGO */
 .logo {
-
-    width: 140px;
-
-    margin-bottom: 10px;
-
-    cursor: pointer;
+  width: 180px;
+    margin-bottom: 30px;
+    align-items: center;
 }
 
 /* TITLE */
@@ -108,4 +105,22 @@ body {
     width: 400px;
 
     border-radius: 15px;
+}
+
+.back-button {
+    margin-bottom: 15px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #333;
 }

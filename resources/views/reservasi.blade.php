@@ -8,10 +8,25 @@
     <link rel="stylesheet" href="{{ asset('css/reservasi.css') }}">
 </head>
 <body>
+@php
+    $kategori = request('kategori');
+    $menu = request('menu');
 
-@include('layouts.Header')
+    $kategoriMap = [
+        'setmenu'   => 'Set Menu',
+        'prasmanan' => 'Prasmanan',
+        'paket'     => 'Nasi Kotak',
+    ];
 
+    $namaKategori = $kategoriMap[$kategori] ?? null;
+    $namaPaket = ($namaKategori && $menu) 
+        ? $namaKategori . ' - Paket ' . $menu 
+        : null;
+@endphp
 <div class="container">
+    <div class="back-button">
+        <a href="{{ route('paket') }}" class="btn-back">← Kembali</a>
+    </div>
 
     <div class="title">
         RESERVASI
@@ -21,11 +36,17 @@
 
         <!-- FORM -->
         <div class="form-box">
-
-            <form id="reservasiForm">
+<form action="{{ route('transaksi') }}" method="POST">
+    @csrf
+                <input type="text" 
+                       id="paket" 
+                       value="{{ $namaPaket }}" 
+                       placeholder="Pilih paket terlebih dahulu"
+                       readonly>
 
                 <input type="text" id="nama" placeholder="Nama" required>
                 <input type="text" id="telepon" placeholder="Nomor Telephone" required>
+                <input type="time" id="waktu" placeholder="Waktu" required>
                 <input type="number" id="jumlah_orang" placeholder="Jumlah Orang" required>
                 <input type="date" id="tanggal" required>
 
@@ -34,10 +55,6 @@
                 </button>
 
             </form>
-
-            <p id="successMessage" style="color:green; display:none; margin-top:10px;">
-                Reservasi berhasil disimpan!
-            </p>
 
         </div>
 
@@ -49,30 +66,6 @@
     </div>
 
 </div>
-
-<script>
-document.getElementById("reservasiForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const data = {
-        nama: document.getElementById("nama").value,
-        telepon: document.getElementById("telepon").value,
-        jumlah_orang: document.getElementById("jumlah_orang").value,
-        tanggal: document.getElementById("tanggal").value
-    };
-
-    let reservasi = JSON.parse(localStorage.getItem("reservasi")) || [];
-    reservasi.push(data);
-    localStorage.setItem("reservasi", JSON.stringify(reservasi));
-
-    document.getElementById("reservasiForm").reset();
-    document.getElementById("successMessage").style.display = "block";
-
-    setTimeout(() => {
-        document.getElementById("successMessage").style.display = "none";
-    }, 3000);
-});
-</script>
 
 </body>
 </html>

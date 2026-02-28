@@ -21,7 +21,7 @@
 
     <!-- TITLE -->
     <div class="title">
-        PAKET MENU
+       PILIH PAKET MENU
     </div>
 
     <!-- NAV -->
@@ -29,10 +29,6 @@
 
         <a href="{{ route('setmenu') }}" class="menu-btn">
             Set Menu
-        </a>
-
-        <a href="{{ route('catering') }}" class="menu-btn">
-            Catering
         </a>
 
         <a href="{{ route('prasmanan') }}" class="menu-btn">
@@ -44,7 +40,7 @@
         </a>
 
     </div>
-
+<a href="{{ route('reservasi', ['kategori' => 'paket', 'menu' => 'A']) }}">
     <!-- CARD -->
     <div class="card-container">
 
@@ -69,7 +65,9 @@
             </ul>
 
         </div>
+</a>
 
+<a href="{{ route('reservasi', ['kategori' => 'paket', 'menu' => 'B']) }}">
         <!-- Paket B -->
         <div class="card">
 
@@ -91,7 +89,7 @@
             </ul>
 
         </div>
-
+</a>
     </div>
 
 </div>

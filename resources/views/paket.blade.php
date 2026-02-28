@@ -21,7 +21,7 @@
 
     <!-- TITLE -->
     <div class="title">
-        PAKET MENU
+        PILIH PAKET MENU
     </div>
 
     <!-- SUBTITLE -->
@@ -34,10 +34,6 @@
 
         <a href="{{ route('setmenu') }}" class="menu-btn">
             Set Menu
-        </a>
-
-        <a href="{{ route('catering') }}" class="menu-btn">
-            Catering
         </a>
 
         <a href="{{ route('prasmanan') }}" class="menu-btn">

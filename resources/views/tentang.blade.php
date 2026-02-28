@@ -55,7 +55,7 @@
 
             <ul>
                 <li>Prasmanan</li>
-                <li>Catering</li>
+                <li>Reservasi</li>
             </ul>
 
             <ul>

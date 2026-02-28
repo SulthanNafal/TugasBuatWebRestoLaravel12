@@ -2,14 +2,14 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Pawon Djawa</title>
+    <title>Daftar - Pawon Djawa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/daftarlogin.css') }}">
 </head>
 <body>
 
@@ -20,34 +20,38 @@
 
     <!-- Card Login -->
     <div class="login-card">
-        <h2>LOGIN</h2>
+        <h2>DAFTAR AKUN</h2>
 
-       <form action="{{ route('login') }}" method="POST">
+      <form action="{{ route('register.proses') }}" method="POST">
     @csrf
 
     <label>Username</label>
-    <input type="text" name="Username" required>
+    <input type="text" name="username" required>
+
+    <label>Nama</label>
+    <input type="text" name="nama" required>
+
+    <label>NO Tlpn</label>
+    <input type="text" name="no_tlpn" required>
+
+    <label>Email</label>
+    <input type="text" name="email" required>
 
     <label>Password</label>
     <input type="password" name="password" id="password" required>
-
-    @if(session('error'))
-        <p style="color:red;">{{ session('error') }}</p>
-    @endif
 
     <div class="options">
         <div class="left">
             <input type="checkbox" onclick="togglePassword()">
             <span>Tampilkan password</span>
         </div>
-        <a href="#" class="forgot">Lupa password?</a>
     </div>
 
-    <button type="submit" class="login-btn">LOGIN</button>
+    <button type="submit" class="login-btn">DAFTAR</button>
 
     <p class="register">
-        Belum punya akun?
-        <a href="{{ route('daftar') }}">Daftar</a>
+        Sudah punya akun?
+        <a href="{{ route('login') }}">Login</a>
     </p>
 </form>
     </div>
